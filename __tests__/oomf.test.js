@@ -13,6 +13,7 @@
 
 const assert = require('assert');
 const dircompare = require('dir-compare');
+const fs = require('fs');
 const oomf = require('../index');
 const path = require('path');
 const Promise = require('bluebird');
@@ -21,8 +22,16 @@ const temp = require('temp').track();
 describe('oomf', function () {
   afterEach(done => temp.cleanup(done));
 
+  it('generates no files if necessary', function () {
+    const oomfile = path.resolve(__dirname, 'oomfiles', 'no_sections', 'no_sections.oomf');
+
+    return Promise.fromCallback(cb => temp.mkdir('oomfiles', cb))
+      .then(output => oomf(oomfile, output))
+      .then(output => Promise.fromCallback(cb => fs.readdir(output, cb)))
+      .then(outputFiles => assert.strictEqual(outputFiles.length, 0));
+  });
+
   [
-    'no_sections',
     'one_section',
     'several_sections',
   ].forEach(function (testName) {

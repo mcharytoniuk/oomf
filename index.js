@@ -11,9 +11,9 @@
 const read = require('./read');
 const write = require('./write');
 
-function oomf(oomfile) {
+function oomf(oomfile, output) {
   return read(oomfile).then(function (fileStream) {
-    return write(oomfile, fileStream);
+    return write(oomfile, fileStream, output);
   });
 }
 
