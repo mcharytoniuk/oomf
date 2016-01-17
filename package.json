@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "bluebird": "^3.1.1"
+  },
+  "devDependencies": {
+    "dir-compare": "^0.0.2",
+    "gore-eslint": "^1.2.1",
+    "gore-mocha": "^1.1.1",
+    "gulp": "^3.9.0",
+    "temp": "^0.8.3"
+  },
+  "description": "One Origin -> Multiple Files.",
+  "engines": {
+    "node": ">=4.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "gulp",
+    "mocha"
+  ],
+  "main": "index",
+  "name": "oomf",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mcharytoniuk/oomf.git"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "version": "1.0.0"
+}

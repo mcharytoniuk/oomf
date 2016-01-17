@@ -1,0 +1,16 @@
+-- test.sass
+body
+    background-color: red
+
+-- test.jade
+div.foo
+    div.bar
+        span
+
+-- test.js
+'use strict';
+
+function somejs() {
+}
+
+module.exports = somejs;
