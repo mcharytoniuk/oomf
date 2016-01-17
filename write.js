@@ -10,7 +10,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const Promise = require('bluebird');
 
 const REGEXP_OUTPUT_FILE_LINE = /^\-\-\s(.*?)$/;
 

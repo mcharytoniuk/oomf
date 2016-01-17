@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "bluebird": "^3.1.1"
   },
   "devDependencies": {
+    "bluebird": "^3.1.1",
     "dir-compare": "^0.0.2",
     "gore-eslint": "^1.2.1",
     "gore-mocha": "^1.1.1",
@@ -27,5 +27,5 @@
   "scripts": {
     "test": "gulp test"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
